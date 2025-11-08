@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# 💳 BillBuddy - Expense Category Prediction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, modern, and responsive web application that uses AI to predict expense categories from text descriptions. Simply enter what you spent on, and let AI categorize it for you!
 
-Currently, two official plugins are available:
+![BillBuddy](https://img.shields.io/badge/React-19.1.1-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
+![Vite](https://img.shields.io/badge/Vite-7.1.7-purple)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🎨 **Beautiful Modern UI** - Gradient background with animated floating blobs and glassmorphism effects
+- 🤖 **AI-Powered Predictions** - Integrates with Gemini AI API for intelligent expense categorization
+- 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
+- ⚡ **Real-time Predictions** - Instant category predictions with confidence scores
+- 🎭 **Category Emojis** - Visual representation for different expense categories
+- ✨ **Smooth Animations** - Professional animations and transitions throughout
+- 🎯 **Simple UX** - Clean, intuitive interface with keyboard support (Enter to predict)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Supported Categories
 
-## Expanding the ESLint configuration
+The app can predict various expense categories including:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🍕 Food
+- 🚗 Transport
+- 🛍️ Shopping
+- 🎬 Entertainment
+- 🏥 Healthcare
+- 💰 Bills
+- 📚 Education
+- ✈️ Travel
+- 🛒 Groceries
+- 💡 Utilities
+- 🏠 Housing
+- 👤 Personal
+- 💪 Fitness
+- 📌 Other
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ishaant97/Expense-Category-Prediction-Frontend.git
+cd Expense-Category-Prediction-Frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🛠️ Built With
+
+- **React 19** - Modern UI library
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool
+- **CSS3** - Modern styling with animations
+
+## 🔌 API Integration
+
+The app integrates with the Expense Category Prediction API:
+
+**Endpoint:** `https://expense-category-api.onrender.com/predict/gemini`
+
+**Request Format:**
+```json
+{
+  "text": "pizza"
+}
+```
+
+**Response Format:**
+```json
+{
+  "confidence": 0.95,
+  "model_used": "gemini_ai",
+  "predicted_category": "Food",
+  "reasoning": null,
+  "success": true,
+  "text": "pizza"
+}
+```
+
+## 📦 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 🎨 Design Features
+
+- **Gradient Background** - Beautiful purple to pink gradient
+- **Animated Blobs** - Floating background elements for depth
+- **Glassmorphism** - Modern frosted glass effect on cards
+- **Smooth Transitions** - Professional hover and click animations
+- **Loading States** - Animated spinner during predictions
+- **Error Handling** - User-friendly error messages
+- **Responsive Layout** - Mobile-first design approach
+
+## 📱 Responsive Breakpoints
+
+- Desktop: > 768px
+- Tablet: < 768px
+- Mobile: < 480px
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**Ishaan**
+- GitHub: [@ishaant97](https://github.com/ishaant97)
+
+---
+
+Made with ❤️ and ☕
