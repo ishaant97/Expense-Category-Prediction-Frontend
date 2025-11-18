@@ -127,7 +127,7 @@ This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-**Ishaan**
+**Ishaant**
 - GitHub: [@ishaant97](https://github.com/ishaant97)
 
 ---
