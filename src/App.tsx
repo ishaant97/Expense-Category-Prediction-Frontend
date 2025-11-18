@@ -140,9 +140,9 @@ function App() {
             <div className="result-section">
               <div className="result-header">
                 <h2>Prediction Result</h2>
-                <div className="confidence-badge">
+                {/* <div className="confidence-badge">
                   {Math.round(result.confidence * 100)}% confident
-                </div>
+                </div> */}
               </div>
 
               <div className="category-display">
